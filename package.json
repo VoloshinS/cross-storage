@@ -8,6 +8,9 @@
     "cross",
     "domain"
   ],
+  "engines": {
+    "node": "^10"
+  },
   "main": "lib/index.js",
   "author": "Daniel St. Jules <danielst.jules@gmail.com>",
   "license": "Apache-2.0",
@@ -19,17 +22,19 @@
   "devDependencies": {
     "connect": "^2.25.7",
     "expect.js": "^0.3.1",
-    "gulp": "*",
-    "gulp-jshint": "^1.8.4",
-    "gulp-rename": "^1.2.0",
-    "gulp-uglify": "^0.3.1",
-    "gulp-header": "^1.1.1",
-    "gulp-rimraf": "^0.1.0",
+    "gulp": "^3.0.0",
+    "gulp-header": "^2.0.9",
+    "gulp-jshint": "^2.1.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-rimraf": "^1.0.0",
+    "gulp-uglify": "^3.0.2",
+    "jshint": "^2.13.1",
     "serve-static": "^1.5.3",
     "zuul": "~3.10.1"
   },
   "scripts": {
     "test": "./node_modules/.bin/zuul --local 8080 --ui mocha-bdd -- test/test.js",
-    "saucetest": "./node_modules/.bin/zuul --ui mocha-bdd -- test/test.js"
+    "saucetest": "./node_modules/.bin/zuul --ui mocha-bdd -- test/test.js",
+    "build": "gulp dist"
   }
 }
